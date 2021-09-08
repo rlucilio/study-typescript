@@ -18,11 +18,11 @@ declare const backpack: Backpack<string>;
 /////////////////////////
 
 class Car {
-    drive() {}
+    drive() { }
 }
 
 class Bike {
-    drive() {}
+    drive() { }
 }
 
 // no error
@@ -33,3 +33,12 @@ console.log(bmw instanceof Car); // False
 console.log(bmw instanceof Bike); // False
 console.log((bmw as Object).constructor.name); // Bike
 /////
+
+function f() {
+    return { x: 10, y: 3 };
+}
+type P = ReturnType<typeof f>;
+// type P = {
+//     x: number;
+//     y: number;
+// }
