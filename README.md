@@ -27,7 +27,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 <!--te-->
 
 ## :white_check_mark: Funcionalidades
-- [x] Terminar a documentação
+- [ ] Terminar a documentação
 ## :computer: Como Rodar
 ### Pré-requisitos
 1. Antes de começar vai ser necessário ter instalado o [node](https://nodejs.org/en/download/);
