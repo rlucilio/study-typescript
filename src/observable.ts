@@ -1,3 +1,1 @@
-export class Observable<T> {
-    [x: string]: (f: any) => void;
-}
+export class Observable<T> {}
