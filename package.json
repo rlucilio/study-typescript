@@ -1,0 +1,23 @@
+{
+  "name": "estudos-doc-typescript",
+  "version": "1.0.0",
+  "description": "<h1  align=\"center\">\r \t<img  width=\"100%\"  src=\"https://i.imgur.com/6PxW4UH.gif\"/>\r </h1>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rlucilio/estudos-doc-typescript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rlucilio/estudos-doc-typescript/issues"
+  },
+  "homepage": "https://github.com/rlucilio/estudos-doc-typescript#readme",
+  "dependencies": {
+    "reflect-metadata": "^0.1.13"
+  }
+}
