@@ -1,0 +1,26 @@
+class Jumpable2 {
+    jump() {}
+}
+
+class Duckable {
+    duck() {}
+}
+
+class Sprite2 {
+    x = 0;
+    y = 0;
+}
+
+interface Sprite2 extends Jumpable2, Duckable {}
+
+function applyMixins(derivedCtor: Function, constructors: Function[]) {
+    constructors.forEach((baseCtor) => {
+        Object.getOwnPropertyNames(baseCtor.prototype).forEach((name) => {
+            Object.defineProperty(
+                derivedCtor.prototype,
+                name,
+                Object.getOwnPropertyDescriptor(baseCtor.prototype, name) || Object.create(null)
+            )
+        })
+    })
+}
