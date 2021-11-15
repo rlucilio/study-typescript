@@ -19,6 +19,10 @@
   "homepage": "https://github.com/rlucilio/estudos-doc-typescript#readme",
   "dependencies": {
     "jquery": "^3.6.0",
+    "node": "^17.1.0",
     "reflect-metadata": "^0.1.13"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.7"
   }
 }

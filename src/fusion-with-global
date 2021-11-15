@@ -1,0 +1,11 @@
+import { Observable } from "./observable";
+
+declare global {
+    interface Array<T> {
+        toObservable(): Observable<T>;
+    }
+}
+
+Array.prototype.toObservable = () => (null as any);
+
+[].toObservable();

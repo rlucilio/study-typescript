@@ -1,0 +1,14 @@
+import { Observable } from './observable';
+
+// Exemplo 1
+//Observable.prototype.map = function (f) {}
+
+
+//Exemplo 2
+declare module './observable' {
+    interface Observable<T> {
+        map<U>(f: (x: T) => U): Observable<U>
+    }
+}
+
+Observable.prototype.map = function (f) {return (null as any)}
