@@ -1,0 +1,145 @@
+interface Nomeado {
+    nome?: string;
+}
+
+class Pessoa {
+    nome?: string;
+}
+
+let p: Nomeado;
+
+p = new Pessoa();
+
+// -> Aqui é um exemplo básico de compatibilidade de tipos só por ter a mesma assinatura
+
+interface Nomeado {
+    nome: string;
+}
+
+let x: Nomeado;
+
+let y =  { nome : 'Renan', localizacao: 'São Paulo' };
+
+x = y;
+
+
+function cumprimenta(n: Nomeado) {
+    console.log("Olá, " + n.nome);
+}
+
+cumprimenta(y);
+// ->  Esse comportamento é válido pois o "y" tem a mesma assinatura da interface "Nomeado"
+
+// let x: (a: number) => 0 = () => 0;
+// let y: (b: number, s: string) => 0 = () => 0;
+
+// y = x;
+// x = y;
+
+// let itens = [1, 2, 3];
+// itens.forEach((item, index, array) => console.log(item));
+// itens.forEach((item) => console.log(item));
+
+// let x = () => ({nome: "Renan"});
+// let y = () => ({nome: "Renan", localizacao: "São Paulo"});
+
+// x = y;
+// y = x;
+
+// -> Aqui vale para o mesmo principio de se encaixar na mesma assinatura
+
+// enum EventType {
+//     Mouse, 
+//     Keyboard
+// }
+
+// interface Eventt {
+//     timestamp: number;
+// }
+
+// interface MouseEventt extends Eventt {
+//     xx: number;
+//     yy: number;
+// }
+
+// interface KeyEventt extends Eventt {
+//     keyCode: number;
+// }
+
+// function listenEvent(eventType: EventType, handler: (n: Eventt) => void ){
+//     //....
+// }
+
+// listenEvent(EventType.Mouse, (n: MouseEventt) => console.log(n.xx + ',' + n.yy) )
+
+// listenEvent(EventType.Mouse, (n: Eventt) => {
+//     console.log((n as MouseEventt).xx + ',' + (n as MouseEventt).yy);
+// })
+
+// listenEvent(EventType.Mouse, ((e: MouseEventt) => 
+// console.log(e.xx + ',' + e.yy)) as (e: Eventt) => void);
+
+// listenEvent(EventType.Mouse, (e: number) => console.log(e))
+
+// Aqui temos exemplo de restrição da compatibilidade
+
+// function chamaDepois(args: any[], callBack: (...args: any[]) => void) {
+//     //
+// }
+
+// chamaDepois([1, 2], (x, y) => console.log(x + ',' + y));
+// chamaDepois([1, 2], (x?, y?) =>console.log(x + ',' + y));
+
+// -> 
+
+// enum Status {
+//     Pronto,
+//     Esperando
+// }
+
+// enum Cor {
+//     Vermelho,
+//     Azul,
+//     Verde
+// }
+
+// let statuss = Status.Pronto;
+// statuss = Cor.Verde;
+// ->
+
+// class Animal {
+//     patas?: number;
+//     constructor(nome: string, numPatas: number) {}
+// }
+
+// class Tamanho {
+//     patas?: number;
+//     constructor(nome: string) {}
+// }
+
+// let a: Animal = new Animal('', 0);
+// let s: Tamanho = new Tamanho('');
+
+// a = s;
+// s = a;
+
+// ->
+
+// interface Empty<T> {}
+// let x: Empty<number> = 0;
+// let y: Empty<String> = 0;
+
+// x = y;
+
+// interface NaoVazio<T> {
+//     data: T;
+// }
+
+// let x: NaoVazio<number>;
+// let y: NaoVazio<string>;
+
+// x = y;
+
+let identidade = function<T>(x: T) : T { return (null as any) }
+let reverter = function<U>(y: U): U { return (null as any) }
+identidade = reverter;

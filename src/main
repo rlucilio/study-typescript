@@ -1,8 +1,0 @@
-import { join, extname, basename } from "path";
-import { readdirSync, renameSync } from "fs";
-
-readdirSync(__dirname).forEach(fileName => {
-    const extension = extname(fileName);
-    const name = basename(fileName, extension);
-    renameSync(join(__dirname, fileName), join(__dirname, name))
-})
