@@ -37,10 +37,10 @@ As seguintes ferramentas foram usadas na construção do projeto:
 ### 🎲 Rodando o código de cada arquivo
 ```bash
 # Clone este repositório
-$ git clone https://github.com/rlucilio/estudos-doc-typescript.git
+$ git clone https://github.com/rlucilio/study-typescript.git
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd estudos-doc-typescript
+$ cd study-typescript
 
 # Execute o arquivo
 $ npx ts-node <Arquivo>
